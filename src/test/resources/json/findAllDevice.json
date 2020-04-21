@@ -1,0 +1,16 @@
+{
+  "data": {
+    "findAllDevice": [
+      {
+         "id": "1",
+	    "userId" : "user101",
+        "carrierId": "car101",
+        "deviceId": "D101",
+        "deviceToken" : "T101",
+        "isActive" : true,
+        "deviceOs" : "windows",
+        "deviceOsVersion": "os1.1"
+      }
+    ]
+  }
+}
