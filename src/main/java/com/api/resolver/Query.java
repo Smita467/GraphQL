@@ -18,7 +18,10 @@ public class Query implements GraphQLQueryResolver {
     }
     
     public Iterable<UserDevice> findAllDevice(){
-        return userRepository.findAll();
+    	UserDevice users=(UserDevice) userRepository.findAll();
+    	System.out.println("getting data from db"+ users );
+//        return userRepository.findAll();
+    	return (Iterable<UserDevice>) users;
     }
 
 

@@ -1,0 +1,24 @@
+query {
+
+  findAllDevice {
+        
+         id
+    
+         userId
+
+         carrierId
+
+         deviceId
+         
+         deviceToken
+         
+         isActive
+         
+         deviceOs
+         
+         deviceOsVersion
+         
+      
+  }
+    
+}
