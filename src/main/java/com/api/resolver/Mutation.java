@@ -7,6 +7,8 @@ import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+
 import java.util.Optional;
 
 import javax.persistence.EntityManager;
@@ -54,6 +56,7 @@ public class Mutation implements GraphQLMutationResolver {
       userObj1.setIsActive(isActive);
       userObj1.setDeviceOs(deviceOs);
       userObj1.setDeviceOsVersion(deviceOsVersion);
+     
 
       return userRepository.save(userObj1);
   }

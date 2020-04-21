@@ -13,11 +13,15 @@ create table UserDevice(
 
     deviceToken varchar(255),
 
-    isActive  bigint,
+    isActive  Boolean,
 
     deviceOs varchar(255),
 
     deviceOsVersion varchar(255),
+    
+    createdDateTime DATETIME,
+    
+    updatedDateTime DATETIME,
 
     primary key (id));
 
