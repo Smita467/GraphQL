@@ -43,7 +43,7 @@ public class QueryTest {
     }
     
     @Test
-    public void findAllDeviceReturnsJsonWith200StatusCode() throws IOException {
+    public void findAllDevice() throws IOException {
 
            saveUserDevice();
 
