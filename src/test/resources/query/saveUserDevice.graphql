@@ -1,0 +1,15 @@
+ mutation {
+  newDevice(userId: "1",carrierId: "1",deviceId: "U11", deviceToken: "T11",isActive: true,deviceOs: "IOS",deviceOsVersion: "OS1")
+  {
+     userId
+     carrierId
+     deviceId
+     deviceToken
+     isActive
+     deviceOs
+     deviceOsVersion
+   }
+   }  
+     
+     
+  

@@ -1,0 +1,5 @@
+mutation {
+  deleteUserDevice(userId: "1")
+  
+   }  
+     

@@ -69,42 +69,6 @@ public class QueryTest {
 
         userDeviceRepository.saveAndFlush(UserDevice);
 }
-
-
-    
-//    @Autowired
-//    private UserDeviceRepository repo;
-//    
-//    public void savUserDevice(){
-//    UserDevice user=new UserDevice("user101","car101","D101","T101",true,"windows","os1.1");
-//    repo.saveAndFlush(user);
-//    }
-//
-//    @Test
-//    public void findAllDeviceReturnsJsonWith200StatusCode(){
-//
-//    	
-//    	savUserDevice();
-//    	
-//        given().log().all()
-//                .contentType("application/json")
-//                .body("{\n" +
-//                        "\t\"query\":\"{findAllDevice { id userId } }\"\n" +
-//                        "}")
-//                .post("/graphql")
-//                .then()
-//                
-//                .body("data.findAllDevice.id", hasItems("1"))
-//                .body("data.findAllDevice.userId", hasItems("user101"))
-//          
-//
-//                .statusCode(200);
-//    }
-//    
-    
-    
- 
-	
     
 
 }
