@@ -61,7 +61,7 @@ public class MutationTest {
     
     
 
-   // @Test
+    @Test
 	public void updateUserDeviceTest() throws IOException 
 	{
     	saveUserDevice1();

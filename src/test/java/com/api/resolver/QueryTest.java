@@ -45,13 +45,16 @@ public class QueryTest {
     @Test
     public void findAllDevice() throws IOException {
 
-           saveUserDevice();
+          // saveUserDevice();
+           
+          
 
-           String expetedResponse = "{\"data\":{\"findAllDevice\":[{\"userId\":\"1\",\"carrierId\":\"1\","
 
-                        + "\"deviceId\":\"U11\",\"deviceToken\":\"T11\",\"isActive\":true,\"deviceOs\":\"IOS\","
-
-                        + "\"deviceOsVersion\":\"OS1\"}]}}";
+    	String expetedResponse = "{\"data\":{\"findAllDevice\":[{\"userId\":\"2\",\"carrierId\":\"1\","
+    	
+    	                        + "\"deviceId\":\"U11\",\"deviceToken\":\"T11\",\"isActive\":true,\"deviceOs\":\"IOS\","
+    	
+    	                        + "\"deviceOsVersion\":\"OS1\"}]}}";
 
            GraphQLResponse findResponse = graphQLTestTemplate.perform("query/findAllDevice.graphql", null);
 
@@ -63,12 +66,15 @@ public class QueryTest {
 
 }
     
-    private void saveUserDevice() {
-
-        UserDevice UserDevice = new UserDevice("1", "1", "U11", "T11", true, "IOS", "OS1");
-
-        userDeviceRepository.saveAndFlush(UserDevice);
-}
+//    private void saveUserDevice() {
+//
+//        UserDevice UserDevice = new UserDevice("2", "1", "U11", "T11", true, "IOS", "OS1");
+//
+//        userDeviceRepository.saveAndFlush(UserDevice);
+//}
     
 
 }
+
+
+

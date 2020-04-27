@@ -1,6 +1,6 @@
 package com.api.model;
 
-
+import com.api.model.*;
 import javax.persistence.*;
 
 import lombok.EqualsAndHashCode;
@@ -8,6 +8,7 @@ import lombok.experimental.SuperBuilder;
 @EqualsAndHashCode(callSuper = true)
 @SuperBuilder(toBuilder = true)
 @Entity
+@Table(name ="UserDevice")
 public class UserDevice extends Auditable  {
 	
 	@Id
@@ -21,8 +22,7 @@ public class UserDevice extends Auditable  {
 	private Boolean isActive;
 	private String deviceOs;
 	private String deviceOsVersion;
-//	private LocalDateTime createdDateTime;
-//	private LocalDateTime updatedDateTime;
+
 
 	
 	
@@ -116,6 +116,15 @@ public class UserDevice extends Auditable  {
 		this.deviceOs = deviceOs;
 		this.deviceOsVersion = deviceOsVersion;
 		
+	}
+
+
+	public UserDevice(String userId, String carrierId, String deviceId, String deviceToken) {
+		super();
+		this.userId = userId;
+		this.carrierId = carrierId;
+		this.deviceId = deviceId;
+		this.deviceToken= deviceToken;
 	}
 	
 	
