@@ -6,6 +6,8 @@ import com.api.model.UserDeviceDTO;
 import com.api.repository.UserDeviceRepository;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
 
+import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -25,12 +27,19 @@ public class Query implements GraphQLQueryResolver {
     	return userRepository.findAll();
     }
    
-    public UserDevice getDeviceDetails(UserDeviceDTO user1)
-    {
-    	
-    return userRepository.fetchDetails(user1.getCarrierId(),user1.getDeviceId());
-    	
-    }
+    public List<UserDevice> getDeviceDetails(UserDeviceDTO user1) {
+    	if(user1.getUserId()==null)
+    	{
+    		return userRepository.fetchDetailsByCarrierID(user1.getCarrierId());
+    	}
+    	else
+    	{
+    		return userRepository.fetchDetails(user1.getUserId(),user1.getCarrierId());
+    	}
+		
+
+
+	}
     
    
 }
@@ -51,4 +60,5 @@ public class Query implements GraphQLQueryResolver {
 
 
 
-////UserDevice user1=new UserDevice(sam.getUserId(),sam.getCarrierId(),sam.getDeviceId());
+
+

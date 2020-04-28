@@ -1,6 +1,5 @@
 package com.api.model;
 
-import com.api.model.*;
 import javax.persistence.*;
 
 import lombok.EqualsAndHashCode;
@@ -24,33 +23,9 @@ public class UserDevice extends Auditable  {
 	private String deviceOsVersion;
 
 
-	
-	
-
 	public UserDevice() {
 		super();
 	}
-	
-	
-//	public LocalDateTime getCreatedDateTime() {
-//		return createdDateTime;
-//	}
-//
-//
-//	public void setCreatedDateTime(LocalDateTime createdDateTime) {
-//		this.createdDateTime = createdDateTime;
-//	}
-//
-//
-//	public LocalDateTime getUpdatedDateTime() {
-//		return updatedDateTime;
-//	}
-//
-//
-//	public void setUpdatedDateTime(LocalDateTime updatedDateTime) {
-//		this.updatedDateTime = updatedDateTime;
-//	}
-
 
 	public int getId() {
 		return id;
@@ -119,14 +94,10 @@ public class UserDevice extends Auditable  {
 	}
 
 
-	public UserDevice(String userId, String carrierId, String deviceId, String deviceToken) {
-		super();
-		this.userId = userId;
-		this.carrierId = carrierId;
-		this.deviceId = deviceId;
-		this.deviceToken= deviceToken;
-	}
 	
+
+
+
 	
 	
 	
